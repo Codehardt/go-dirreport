@@ -11,4 +11,4 @@ go:
 go_import_path: github.com/Codehardt/go-dirreport
 notifications:
   email: false
-slack: nextron-systems:51vB5h6MxkSbX5iMpscrvOza
+  slack: nextron-systems:51vB5h6MxkSbX5iMpscrvOza
