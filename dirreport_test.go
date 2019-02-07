@@ -160,7 +160,7 @@ func testDiff(t *testing.T, eNewFiles, eRemovedFiles, eModifiedFiles, eNewDirs, 
 		sort.Strings(res)
 	}
 	newFiles, removedFiles, modifiedFiles, newDirs, removedDirs := r1.Diff(r2)
-	t.Logf("%s: diff: %+v, %+v, %+v, %+v, %+v", t.Name(), newFiles, removedFiles, modifiedFiles, newDirs, removedDirs)
+	t.Logf("diff: %+v, %+v, %+v, %+v, %+v", newFiles, removedFiles, modifiedFiles, newDirs, removedDirs)
 	if !reflect.DeepEqual(newFiles, eNewFiles) {
 		t.Fatalf("new files diff failed, expected: %+v, got: %+v", eNewFiles, newFiles)
 	}
