@@ -16,6 +16,8 @@ type DebugFunc func(f string, a ...interface{})
 // Debugf can be used to add a debug output writer
 var Debugf = func(f string, a ...interface{}) {}
 
+// DirectoryReport holds a report of a directory. This includes
+// subdirectories and hashes of all files.
 type DirectoryReport struct {
 	root   string
 	Files  map[string]string   `json:"files"`
@@ -23,6 +25,8 @@ type DirectoryReport struct {
 	hasher hash.Hash
 }
 
+// NewDirectoryReport walks through the specified path and
+// generates a DirectoryReport.
 func NewDirectoryReport(path string) (*DirectoryReport, error) {
 	directoryReport := &DirectoryReport{
 		root:   path,
